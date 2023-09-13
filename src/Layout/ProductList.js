@@ -8,7 +8,10 @@ class ProductList extends Component {
         })
     }
     render() {
-        return <div className="col-6 row">{this.renderList()}</div>;
+        return <div id="productList">
+            <h2 className='text-center'>ProductList</h2>
+            <div className="row">
+                {this.renderList()}</div></div>;
     }
 }
 let mapStateToProps = (state) => {

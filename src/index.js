@@ -18,3 +18,11 @@ root.render(
 
 reportWebVitals();
 
+export let showList =()=>{
+  document.getElementById("productList").classList.add("active");
+  document.getElementById("productCart").classList.remove("active");
+}
+export let showCart =()=>{
+  document.getElementById("productList").classList.remove("active");
+  document.getElementById("productCart").classList.add("active");
+}

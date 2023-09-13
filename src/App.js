@@ -1,9 +1,9 @@
 import './App.css';
-import ShoeRedux from './Layout/ShoeRedux';
+import ShoeStore from './Layout/ShoeStore';
 function App() {
   return (
     <div className="App">
-      <ShoeRedux/>
+          <ShoeStore />
     </div>
   );
 }

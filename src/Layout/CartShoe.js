@@ -4,7 +4,6 @@ import { UPDATE_QUANTITY, LOWER_NUMBER, RAISE_NUMBER, REMOVE_ITEM } from "./cons
 class CartShoe extends Component {
   renderCart = () => {
     let { cart } = this.props;
-
     return cart.map((item, index) => {
       let { name, price, image, soLuong, id } = item;
       return (
@@ -50,18 +49,23 @@ class CartShoe extends Component {
   };
   render() {
     return (
-      <div className="col-6">
-        <table className="table">
-          <thead>
+
+      <table className="table" id="productCart">
+
+        <thead>
+          <tr>
+            <th colSpan={5}><h2 className="text-center">Cart</h2></th>
+          </tr>
+          <tr>
             <th>Name</th>
             <th>Pice</th>
             <th>Image</th>
             <th>Quantity</th>
             <th>Action</th>
-          </thead>
-          <tbody>{this.renderCart()}</tbody>
-        </table>
-      </div>
+          </tr>
+        </thead>
+        <tbody>{this.renderCart()}</tbody>
+      </table>
     );
   }
 }
